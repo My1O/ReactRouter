@@ -4,14 +4,16 @@ import Home from "./pages/Home.jsx"
 import Sobre from "./pages/Sobre"
 import Page404 from './pages/page404';
 import Header from './components/Header';
+import Post from './pages/Post';
+import Categoria from './pages/Categoria';
 
 //importar react router de react router dom
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   //muestra ubicacion del componente
-  const location = window.location.pathname
-  console.log(location)
+  //const location = window.location.pathname
+  //console.log(location)
 
 
   return (
@@ -25,6 +27,8 @@ function App() {
      <Routes>
         <Route path='/' element ={<Home/>}/>
         <Route path='/sobre' element = {<Sobre />} />
+        <Route path='/posts/:id' element={<Post />} />
+        <Route path='/categoria/:id/*' element={<Categoria />}/>
         <Route path='*' element={<Page404 />}/>
      </Routes>
     </Router>

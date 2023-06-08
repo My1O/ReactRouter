@@ -5,13 +5,14 @@ import { Link } from "react-router-dom"
 
 const ListPosts = ({ url }) => {
 
+    console.log(url)
     const [posts, setPosts] = useState([])
 
     useEffect( () =>{
         buscar(url, setPosts)
        
     }, [url])
-
+    //destructure Post = con 
     return (
         <section className="posts container">
               {
